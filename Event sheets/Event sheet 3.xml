@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 3</name>
+    <events>
+        <event-block sid="543799143579813">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="920552673123634" type="Musuh3">
+                    <param id="0" name="Object">Wall3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="381986793493670" type="Musuh3">
+                    <param id="0" name="Object">Wall3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="445616405654033">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="227328361380021" type="Wall3">
+                    <param id="0" name="Object">Player3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="305102082892642" type="Player3">
+                    <param id="0" name="X">374</param>
+                    <param id="1" name="Y">393</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="470690459671640">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="913306073032091" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="382567157795230" type="Audio">
+                            <param id="0" name="Audio file">Leg Breaking-SoundBible.com-231816666</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">30</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="695008491423506">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="972045820990450" type="Musuh3">
+                    <param id="0" name="Object">Player3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="743472122962767" type="Player3">
+                    <param id="0" name="X">374</param>
+                    <param id="1" name="Y">393</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="848369437822054">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="169929150919134" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="791182741823749" type="Audio">
+                            <param id="0" name="Audio file">Glass_Break-stephan_schutze-958181291</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">30</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="424508669913431">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="246483353339683" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="521406644644273" type="Midle3">
+                    <param id="0" name="X">Gamepad3.X</param>
+                    <param id="1" name="Y">Gamepad3.Y</param>
+                </action>
+                <action id="-8" name="Set angle" sid="434770232622538" type="Midle3">
+                    <param id="0" name="Angle">angle(Gamepad3.X,Gamepad3.Y,Touch.X,Touch.Y)</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="412729037414161" type="Midle3">
+                    <param id="0" name="Angle">Self.Angle</param>
+                    <param id="1" name="Distance">min(distance(Touch.X,Touch.Y,Midle3.X,Midle3.Y)/2,40)</param>
+                </action>
+                <action id="-8" name="Set angle" sid="433171119438462" type="Player3">
+                    <param id="0" name="Angle">angle(Gamepad3.X,Gamepad3.Y,Midle3.X,Midle3.Y)</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="402290288756328" type="Player3">
+                    <param id="0" name="Angle">angle(Gamepad3.X,Gamepad3.Y,Midle3.X,Midle3.Y)</param>
+                    <param id="1" name="Distance">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="694814072425250">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="699743586109799" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="119397562870404" type="Midle3">
+                    <param id="0" name="X">Gamepad3.X</param>
+                    <param id="1" name="Y">Gamepad3.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="987223794885216">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="969518426966143" type="Touch">
+                    <param id="0" name="Object">Sprite8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="831261765108364" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="591803510644864">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="155974974465277" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="760794206345179" type="Midle3">
+                    <param id="0" name="X">Gamepad3.X</param>
+                    <param id="1" name="Y">Gamepad3.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="986065129172775">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="939340025364092" type="System">
+                            <param id="0" name="Variable">Music</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="779027503500738" type="Audio">
+                            <param id="0" name="Audio file">The Hacker -- Heartbeat Soundtrack</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="241540853597815">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="336795567363170" type="Player3">
+                    <param id="0" name="Object">Finish3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="195341811774879" type="System">
+                    <param id="0" name="Layout">Layout 4</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="Timer3" sid="381085859173037" static="0" type="number">20</variable>
+        <event-block sid="254862433719343">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="685097490092184" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="917891853794953" type="Text3">
+                    <param id="0" name="Text">&quot;Timer :&quot; &amp;Timer3</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="783524517591055" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="810792165386495">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="754372335400046" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="476534599560605" type="System">
+                    <param id="0" name="Variable">Timer3</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="466177361425705" type="Text3">
+                    <param id="0" name="Text">&quot;Timer :&quot;&amp;Timer3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="723842270261605">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="210009260709738" type="System">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Time (seconds)">15.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="704496716930439" type="Warn3">
+                    <param id="0" name="&apos;On&apos; time">0.4</param>
+                    <param id="1" name="&apos;Off&apos; time">0.4</param>
+                    <param id="2" name="Duration">4.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="637503160037487">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="827862879213027" type="System">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Time (seconds)">20.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="799775289580996" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="434319696622022">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="725982782606554" type="System">
+                    <param id="0" name="Variable">Timer3</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="729209942708656" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
